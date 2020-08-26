@@ -1,0 +1,72 @@
+---
+layout: post
+title: "Qt & Safety Critical Applications"
+subtitle: "Help you meet safety standards"
+date: 2020-08-25 10:45:13 -1000
+background: '/img/posts/06.jpg'
+---
+
+<!-- <h2 class="section-heading">Safety Critical Design</h2>
+
+<p>Qt Quick Controls can build fantastic UIs by offering the most basic UI components for fluid and modern-looking UI
+    design. These controls cater to the most common use cases without any change, and offer a lot more possibilities
+    with their customization options.</p>
+<p>
+<ul>
+    <li><a href="https://doc.qt.io/qt-5/qtquickcontrols2-styles.html">Styling Qt Quick Controls</a> to enhance natural
+        user experience.</li>
+    <li><a href="https://doc.qt.io/qt-5/qtquickcontrols2-customize.html">Customizingling Qt Quick Controls</a> only necessary.</li>
+</ul>
+</p> -->
+
+<h2 class="section-heading">Qt Safe Renderer Overview</h2>
+<p>
+    Qt Safe Renderer is designed to be integrated into a system that has a separate processes for safety-critical and non-safety functionality. Qt Safe Renderer ensures graphical rendering of safety-critical information by partitioning the related functionality into an independent subsystem that is run on its own process. Qt Safe Renderer monitors operation of the main UI and errors in the main UI do not affect the rendering of safety-critical information. Instead, Qt Safe Renderer restarts the main UI after detecting errors.
+</p>
+<p>
+    Functional safety applies to many vertical industries, such as automotive, medical, and automation. In the automotive industry, it is essential that safety-critical information in the digital displays is rendered even if some malfunction prevents rendering of the non-safety information in the UI (user interface). In medical industry, nurses, doctors, and technicians use safety-critical medical devices that must be safe to use. In automation industry, there is need for well-placed, prominent error indicators..
+</p>
+<p>
+    Examples:
+    <ul>
+        <li>The detection of brake failure in a car and showing indication about this to a driver.</li>
+        <li>The detection of a malfunction in a medical device and shutting down the device operations as a result of this.</li>
+    </ul>
+ </p>
+ <p>Details can be found <a href="https://www.qt.io/product/functional-safety-and-qt">here</a>.</p>
+ <img class="img-fluid" src="/img/posts/automotive.png" alt="Demo Image">
+
+<h2 class="section-heading">Use Certified RTOS</h2>
+<p>Certified RTOS and toolchain saves time and effort in system level certification.
+</p>
+<img class="img-fluid" src="/img/posts/rtos.png" alt="Demo Image">
+
+<h2 class="section-heading">Use Hypervisor</h2>
+<p>A Hypervisor runs separate OS for safety critical and other functionality.
+    OS can share resources and data as long as the separation guarantees integrity of the safety critical software.
+    Safety critical functionality can be assigned to a dedicated CPU core. 
+    Shared resources controlled by Hypervisor(e.g. GPU).
+    
+</p>
+<img class="img-fluid" src="/img/posts/hypervisor.png" alt="Demo Image">
+
+
+<h2 class="section-heading">Processor Seperation</h2>
+<p>Separate processors or a single SoC with separate CPUs to run different OS for safety critical and other functionality.
+    A microcontroller CPU may be enough for it. Other functionality can run on embedded Linux.
+    
+</p>
+<img class="img-fluid" src="/img/posts/processor.png" alt="Demo Image">
+
+<h2 class="section-heading">Qt Safe Renderer Runtime</h2>
+<p>
+    <ul>
+        <li>Safety critical UI drawn to a separate Hardware layer.</li>
+        <li>Qt Safe Renderer listens to heartbeat from Main Ui and control it.</li>
+        <li>No changes to safety critical code due to UI changes.</li>
+    </ul>
+</p>
+<img class="img-fluid" src="/img/posts/runtime.png" alt="Demo Image">
+
+<h2 class="section-heading">Demo</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9a8lZHj_h4M?start=1198" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
