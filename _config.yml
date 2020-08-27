@@ -1,14 +1,14 @@
-title:              Progmatic Qt
+title:              Pragmatic Qt
 email:              lei.zhang.auckland@gmail.com
-description:        Progmatic tips for Qt development
-author:             Progmatic Programmer
+description:        Pragmatic tips for Qt development
+author:             Pragmatic Programmer
 baseurl:            ""
-url:                "https://progmaticprogrammer.github.io"
+url:                "https://pragmaticQt.github.io"
 theme:              jekyll-theme-clean-blog
 
 # Social Profiles
 twitter_username:   
-github_username:    ProgmaticProgrammer
+github_username:    pragmaticQt
 facebook_username:  
 instagram_username:  
 linkedin_username:
