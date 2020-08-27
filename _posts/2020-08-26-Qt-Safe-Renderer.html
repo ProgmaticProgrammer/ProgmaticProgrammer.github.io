@@ -30,29 +30,21 @@ background: '/img/posts/06.jpg'
  <p>Details can be found <a href="https://www.qt.io/product/functional-safety-and-qt">here</a>.</p>
  <img class="img-fluid" src="/img/posts/automotive.png" alt="Demo Image">
 
-<!--
-<h2 class="section-heading">Use Certified RTOS</h2>
-<p>Certified RTOS and toolchain saves time and effort in system level certification.
+<h2 class="section-heading">Typical Operation</h2>
+<p>
+    <ul>
+        <li>Communication between Qt Safe Renderer and Main UI minimized.</li>
+        <li>Qt Safe Renderer draws predefined bitmaps to screen based on system events.</li>
+    </ul>
 </p>
-<img class="img-fluid" src="/img/posts/rtos.png" alt="Demo Image">
+<img class="img-fluid" src="/img/posts/ErrorStart.png" alt="ErrorStart">
+<img class="img-fluid" src="/img/posts/ErrorEnd.png" alt="ErrorEnd">
 
-<h2 class="section-heading">Use Hypervisor</h2>
-<p>A Hypervisor runs separate OS for safety critical and other functionality.
-    OS can share resources and data as long as the separation guarantees integrity of the safety critical software.
-    Safety critical functionality can be assigned to a dedicated CPU core. 
-    Shared resources controlled by Hypervisor(e.g. GPU).
-    
+<h2 class="section-heading">Main UI Recovery</h2>
+<p>
+    <li>Qt Safe Renderer listens to heartbeat from Main UI.In case of failure, it can restart the Main UI.</li>
 </p>
-<img class="img-fluid" src="/img/posts/hypervisor.png" alt="Demo Image">
-
-
-<h2 class="section-heading">Processor Seperation</h2>
-<p>Separate processors or a single SoC with separate CPUs to run different OS for safety critical and other functionality.
-    A microcontroller CPU may be enough for it. Other functionality can run on embedded Linux.
-    
-</p>
-<img class="img-fluid" src="/img/posts/processor.png" alt="Demo Image">
--->
+<img class="img-fluid" src="/img/posts/MainUIRecovery.png" alt="ErrorStart">
 
 <h2 class="section-heading">Qt Safe Renderer Architecture and Runtime</h2>
 <p>
@@ -62,7 +54,7 @@ background: '/img/posts/06.jpg'
         <li>No changes to safety critical code due to UI changes.</li>
     </ul>
 </p>
-<img class="img-fluid" src="/img/posts/runtime.png" alt="Demo Image">
+<img class="img-fluid" src="/img/posts/runtime.png" alt="runtime">
 
 <h2 class="section-heading">Demo</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9a8lZHj_h4M?start=1198" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
