@@ -1,0 +1,45 @@
+---
+layout: post
+title: "GammaRay in Action"
+subtitle: "Visualize the Application's Behavior More Easily"
+date: 2020-08-28 10:45:13 -1000
+background: '/img/posts/06.jpg'
+---
+<h2 class="section-heading">GammaRay - Domain-Specific Debugger</h2>
+<p><img src="/img/posts/gammaray.png" alt="Effective QML, Thomas McGuire, Qt Summit 2015"></p>
+
+<p>
+    When trying to analyze bugs in your application, 
+    an instruction-level debugger is usually your first tool of choice, and rightfully so. 
+    Debuggers allow you to follow the program flow and allow you to inspect the state of objects or variables. 
+    When using a debugger with proper Qt integration, such as in QtCreator, 
+    it will also handle Qt’s own data types correctly. 
+    However, when dealing with complex frameworks this level of detail is often too low-level. 
+    Keeping an overview in a large scene graph or following the complex interactions between models 
+    and views can quickly become a cumbersome task this way.
+</p>
+<p>
+    GammaRay addresses this by providing domain-specific debugging aids on a much higher level. 
+    It provides easy ways of navigating through the complex internal structures you find in some Qt frameworks, 
+    such as the QtQuick scene graphs, model/view, QTextDocument, state machines and more. 
+    Unlike the debugger, GammaRay understands those internal structures and can present them in a meaningful way, 
+    making it a tool that should not be missing in any Qt developer’s toolbox.
+</p>
+<p>
+    <ul>
+        <li>
+    Follow <a href="https://www.kdab.com/development-resources/qt-tools/gammaray/">GammaRay</a> to see what can you do with it.            
+        </li>
+        <li>
+    Follow <a href="https://github.com/pragmaticQt/GammaRay">GammaRay for Felgo</a> to see one custom build for Felgo.            
+        </li>
+        <li>
+    Follow <a href="https://www.embeddeduse.com/2019/11/09/detecting-overdraw-in-qml-hmis-with-gammaray/">Detecting Overdraw</a> 
+    to see one classic use case.                
+        </li>
+        <li>
+            <a href="https://www.youtube.com/playlist?list=PL6CJYn40gN6itybeSJb5FvRWOxVW5PCUX">GammaRay Tutorials</a> will help you get started.                
+         </li>
+    </ul>
+</p>
+
