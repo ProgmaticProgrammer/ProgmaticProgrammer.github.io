@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Qt In-Vehicle Infotainment (IVI) module"
+subtitle: "A Flexible Way to Define New APIs"
+date: 2020-08-28 10:45:13 -1000
+background: '/img/posts/06.jpg'
+---
+<h2 class="section-heading">Qt IVI - Facilitate APIs defining</h2>
+
+<p>
+    The Qt IVI Generator provides a flexible way to define new APIs via an Interface Definition Language (IDL) and
+    generate classes for use, from C++ and QML.
+</p>
+<p>
+    Qt IVI is built around a pattern that separates the API exposed to the application developer, the so called feature,
+    and the code that implements it, the backend. There can be multiple backends per feature; the Core module provides
+    support for finding the corresponding backend in an easy-to-use way.
+</p>
+<p>
+
+    The following diagram illustrates the generic architecture in Qt IVI: Middleware API, Middleware Backend, and
+    Middleware Service.
+
+</p>
+<img src="/img/posts/qtivi-overview.png" alt="Qt IVI Overview" width="100%"/>
