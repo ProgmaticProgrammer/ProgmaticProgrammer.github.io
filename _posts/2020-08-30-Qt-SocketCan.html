@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Qt SocketCan Plugin"
+subtitle: "Can bus and Qt are easy and fun!"
+date: 2020-08-29 10:45:13 -1000
+background: '/img/posts/06.jpg'
+---
+<h2 class="section-heading">Setting up a virtual CAN bus</h2>
+<p>
+    The SocketCAN plugin encapsulates the Linux sockets API for accessing the CAN devices. 
+    This plugin requires a Linux Kernel with SocketCAN support and SocketCAN device drivers for the used CAN hardware.
+</p>
+
+<p>
+    Note: For CAN FD usage, the MTU (Maximum Transmission Unit) has to be set to 72 byte.
+</p>
+<p>
+    <code>
+    sudo modprobe vcan <br/>
+    sudo ip link add dev vcan0 type vcan <br/>
+    sudo ip link set up vcan0 mtu 72 <br/>
+    </code>    
+</p>
+<p>
+    <code>
+    # Display received CAN messages with absolute timestamps and flags <br/>
+    candump -ta -x vcan0 <br/>
+
+    # Send a CAN FD message with flags BRS and EFI set <br/>
+    cansend vcan0 123##3112233445566778899aabbccddeeff <br/>
+
+    # Generate random CAN messages <br/>
+    cangen vcan0 <br/>
+    </code>    
+</p>
+
+
+<p>
+    The command line test programs used above are from the can-utils package, install it by running <br/>
+    <code>
+        sudo apt-get install can-utils
+    </code>    
+</p>
+
+
+<img src="/img/posts/vcan-setup.png" alt="Set up" width="100%"/>
+
+<h2 class="section-heading">Messages on CAN bus</h2>
+<p>
+    It is easy to start a CAN example from Qt Creator.
+</p>
+<img src="/img/posts/vcan-sample.png" alt="Connection" width="100%"/>
+<img src="/img/posts/vcan-project.png" alt="Message" width="100%"/>
+<p>
+    Setup vcan0 as CAN interface and connect the sample application to the virtual CAN bus.
+</p>
+<img src="/img/posts/vcan-connect.png" alt="Connection" width="100%"/>
+<p>
+    On the other end, use can-utils to send random CAN message.
+    You can see the messages showing at the Qt sample application.
+</p>
+<img src="/img/posts/vcan-message.png" alt="Message" width="100%"/>
+
+<h2 class="section-heading">CAN Bus demo in QtWS17 conference</h2>
+<p>
+    Credit to Nazar Babik from Viking Software.
+</p>
+<img src="/img/posts/can-hardware.png" alt="Hardware" width="100%"/>
+<img src="/img/posts/can-software.png" alt="Software" width="100%"/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B4w5Gkv5A9U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
