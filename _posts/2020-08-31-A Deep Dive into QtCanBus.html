@@ -12,13 +12,16 @@ Controller Area Networks (CANs, for short) are used for the communication betwee
 <p>
 When we build an HMI application to control a machine, we need a lot more functionality than the Qt CAN Bus API should offer. The HMI application must not send CAN frames too fast to avoid buffer overflows in the CAN controller. When the HMI application receives, say, more than 200 CAN frames per second and tries to display the changes, it will freeze. The HMI application must be able to recover from CAN bus errors. We do not want to write the code for serialising and deserialising thousands of CAN messages manually, but want to generate this code automatically.
 </p>
-<p>
+<div class="videoWrapper">
     <iframe src="//www.slideshare.net/slideshow/embed_code/key/EVbkZUVUpIuqcF" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-</p>
+</div>
 
 
 <h2 class="section-heading">Deal with frame overflow in CAN bus</h2>
+<div class="videoWrapper">
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/tb9qR7RQV3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
+</div>
 <h2 class="section-heading"><a href="https://www.csselectronics.com/screen/page/simple-intro-j1939-explained/language/en">J1939 Explained - A Simple Intro (2020)</a></h2>
+<div class="videoWrapper">
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/LxtLiP9P6G0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
